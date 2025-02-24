@@ -138,7 +138,7 @@ def main(ticker, interval):
 ################################################################
 #########################################################
 
-
+st.set_page_config(layout="wide")
 ticker = st.text_input(label="Enter Ticker in (Caps): ",
               value='EGX30',
               key='ticker')
