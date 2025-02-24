@@ -1,0 +1,9 @@
+arch
+datetime
+git+https://github.com/rongardF/tvdatafeed.git
+numpy
+pandas
+plotly
+retry
+statsmodels
+streamlit
