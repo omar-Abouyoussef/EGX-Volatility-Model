@@ -54,7 +54,7 @@ def model(x_rt):
 
 def calculate_risk_premium(x_rt, vix):
     x_rt = x_rt.reindex(vix.index)
-    risk_premium = vix['cond_vol']/x_rt.rolling(window=30).std()
+    risk_premium = (vix['cond_vol']/x_rt.rolling(window=30).std())/100
     return risk_premium
 
 def all_plotting(close,vix, risk_premium):
