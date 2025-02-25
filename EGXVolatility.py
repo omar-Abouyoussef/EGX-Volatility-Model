@@ -48,7 +48,7 @@ def calculate_returns(x, period, log=True):
     return x_rt
 
 def model(x_rt):
-    garch = arch_model(x_rt, vol='EGARCH', mean='AR',lags=2,p=1, o=1, q=1, dist='skewt', rescale=True)
+    garch = arch_model(x_rt, vol='GARCH', mean='AR',lags=2,p=1, o=0, q=1, dist='skewt', rescale=True)
     garch_result = garch.fit(cov_type='robust',update_freq=5, disp="off")
     return garch_result
 
